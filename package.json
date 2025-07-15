@@ -1,0 +1,16 @@
+{
+  "name": "scriptedblossoms-dev",
+  "version": "1.0.0",
+  "description": "ScriptedBlossoms WebApp",
+  "author": "Aris",
+  "private": true,
+  "scripts": {
+    "build": "npx nuxi build --preset=azure",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "nuxt": "3.17.5"
+  }
+}

@@ -1,0 +1,17 @@
+trigger:
+  - master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - checkout: self
+    submodules: true
+
+  - task: AzureStaticWebApp@0
+    inputs:
+      app_location: '/'
+      app_build_command: 'npx nuxi build --preset=azure'
+      output_location: '.output/public'
+      api_location: '.output/server'
+      azure_static_web_apps_api_token: '$(deployment_token)'
